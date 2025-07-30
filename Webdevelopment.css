@@ -1,0 +1,251 @@
+    /* --- 1. CSS Variables for Easy Theming --- */
+        :root {
+            --color-bg-light: #FFFFFF;
+            --color-bg-grey: #F8F9FA;
+            --color-bg-dark: #ffffff;
+            --color-text-primary: #111827;
+            --color-text-secondary: #4B5563;
+            --color-text-light: #000000;
+            --color-accent: #A3E635; /* Lime-yellow from the example */
+            --color-accent-hover: #82b92a;
+            --color-border: #E5E7EB;
+            --font-family: 'Inter', sans-serif;
+            --transition-speed: 0.3s;
+        }
+
+        /* --- 2. General Setup --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-family);
+            background-color: var(--color-bg-light);
+            color: var(--color-text-primary);
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+        section {
+            padding: 6rem 0;
+        }
+        
+        h1, h2, h3 {
+            font-weight: 700;
+        }
+
+        .section-title .highlight {
+            background-color: var(--color-accent);
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            color: var(--color-text-primary);
+        }
+
+        /* --- 3. Hero Section --- */
+        .hero-section {
+            background-color: var(--color-bg-dark);
+            color: var(--color-text-light);
+            padding-top: 8rem;
+            padding-bottom: 8rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+        @media (min-width: 992px) {
+            .hero-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        
+        .hero-title {
+            font-size: clamp(2.5rem, 6vw, 3.5rem);
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+        }
+        
+        .hero-text {
+            color: #D1D5DB;
+            font-size: 1.1rem;
+            line-height: 1.7;
+            max-width: 500px;
+            margin-bottom: 2.5rem;
+        }
+        
+        .btn {
+            padding: 0.8rem 2rem;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 50px;
+            transition: all var(--transition-speed);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--color-text-light);
+            color: var(--color-text-light);
+        }
+        
+        .btn-outline:hover {
+            background-color: var(--color-text-light);
+            color: var(--color-text-primary);
+        }
+        
+        .hero-image {
+            display: none; /* Hide by default on mobile */
+        }
+        
+        @media (min-width: 992px) {
+            .hero-image {
+                display: block;
+                position: absolute;
+                top: 50%;
+                right: -10%;
+                width: 60%;
+                transform: translateY(-50%);
+                z-index: 1;
+                opacity: 0.8;
+            }
+            .hero-image img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        /* --- 4. Advantages Section --- */
+        .advantages-section {
+            background-color: var(--color-bg-grey);
+        }
+        .advantages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
+        }
+        .advantage-card {
+            text-align: center;
+        }
+        .advantage-card .icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+        }
+        .advantage-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+        }
+        .advantage-card p {
+            color: var(--color-text-secondary);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        /* --- 5. CTA Banner Section --- */
+        .cta-banner {
+            background-color: var(--color-bg-dark);
+            color: var(--color-text-light);
+            padding: 4rem 0;
+        }
+        .cta-banner .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 2rem;
+        }
+        .cta-banner h2 {
+            font-size: clamp(1.5rem, 4vw, 2.25rem);
+            max-width: 600px;
+        }
+        .btn-accent {
+            background-color: var(--color-accent);
+            color: var(--color-text-primary);
+            font-size: 1.1rem;
+        }
+        .btn-accent:hover {
+            background-color: var(--color-accent-hover);
+        }
+
+        /* --- 6. Services Section --- */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+        }
+        .service-card h3 {
+            color: var(--color-accent-hover);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+        .service-card p {
+            color: var(--color-text-secondary);
+            margin-bottom: 1.5rem;
+        }
+        .service-card .deliverables {
+            font-size: 0.8rem;
+            color: var(--color-text-secondary);
+            padding-top: 1rem;
+            border-top: 1px solid var(--color-border);
+        }
+
+        /* --- 7. FAQ Accordion --- */
+        .faq-section {
+            background-color: var(--color-bg-grey);
+        }
+        .accordion-item {
+            border-bottom: 2px solid var(--color-border);
+        }
+        .accordion-header {
+            width: 100%;
+            background: none;
+            border: none;
+            text-align: left;
+            padding: 1.5rem 0;
+            font-size: 1.25rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        .accordion-icon {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--color-accent-hover);
+            transition: transform var(--transition-speed) ease;
+        }
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height var(--transition-speed) ease-out;
+            color: var(--color-text-secondary);
+            line-height: 1.8;
+        }
+        .accordion-content ul {
+            list-style-position: inside;
+            padding-left: 0.5rem;
+        }
+        .accordion-content p, .accordion-content ul {
+            padding-bottom: 1.5rem;
+        }
+        .accordion-item.active .accordion-header .highlight {
+            color: var(--color-accent-hover);
+        }
+        .accordion-item.active .accordion-icon {
+            transform: rotate(45deg);
+        }
+        .accordion-item.active .accordion-icon::before {
+            content: '-';
+        }
