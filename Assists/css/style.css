@@ -36,7 +36,7 @@
         /* --- 2. HEADER & NAVIGATION --- */
         .header { background-color: var(--color-bg); border-bottom: 1px solid var(--border-color); position: sticky; top: 0; z-index: 1000; }
         .navbar { display: flex; justify-content: space-between; align-items: center; height: var(--header-height); }
-        .logo img { height: 60px; }
+        .logo img { height: 60px;  } 
         .nav-links { display: none; }
         .mobile-menu-toggle { display: block; background: none; border: none; font-size: 2rem; cursor: pointer; z-index: 1200; position: relative; }
         

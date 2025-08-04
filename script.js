@@ -13,30 +13,30 @@
                 }, 
                 { 
                     "Data & AI Consulting": [
-                        { text: "Data Strategy", href: "services/data-strategy" }, 
-                        { text: "AI Integration", href: "services/ai-integration" }, 
-                        { text: "Process Optimization", href: "services/process-optimization" }
+                        { text: "Data Strategy", href: "dataStrategy.html" }, 
+                        { text: "AI Integration", href: "aiIntegration.html" }, 
+                        { text: "Process Optimization", href: "processOptimze.html" }
                     ] 
                 }, 
                 { 
                     "Branding & Design": [
-                        { text: "UI/UX Design", href: "services/ui-ux-design" }, 
+                        { text: "UI/UX Design", href: "uiux.html" }, 
                         { text: "Brand Strategy", href: "branding.html" }, 
-                        { text: "Visual Identity", href: "services/visual-identity" }
+                        { text: "Visual Identity", href: "visualidentity.html" }
                     ] 
                 }, 
                 { 
                     "Marketing Solutions": [
                         { text: "Social Media Marketing", href: "socialMediamarketing.html" }, 
                         { text: "SEO", href: "seo.html" }, 
-                        { text: "Growth Consulting", href: "services/growth-consulting" }
+                        { text: "Growth Consulting", href: "growthconsulation.html" }
                     ]
                 },
                 { 
                     "Brand Consulting": [
-                        { text: "Rebranding", href: "services/rebranding" }, 
-                        { text: "Storytelling", href: "services/storytelling" }, 
-                        { text: "Market Fit", href: "services/market-fit" }
+                        { text: "Rebranding", href: "rebranding.html" }, 
+                        { text: "Storytelling", href: "storytelling.html" }, 
+                        { text: "Market Fit", href: "marketfit.html" }
                     ]
                 }
             ] 
@@ -58,7 +58,7 @@
                 { text: "Blog", href: "blogs.html" }, 
                 { text: "Case Studies", href: "casestudies.html" },
                 { text: "Industry Trends", href: "industrytrends.html" },
-                { text: "Founder's Voice", href: "insights/founders-voice" }
+                { text: "Founder's Voice", href: "founders.html" }
             ] 
         }, 
         "About Us": { 
@@ -69,7 +69,7 @@
                 { text: "The Team", href: "Team.html" }
             ] 
         }, 
-        "Careers": { type: 'link', href: "carrer.html" } 
+        "Careers": { type: 'link', href: "/carrer.html" } 
     };
     
     const header = document.querySelector('.header'); 
